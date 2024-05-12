@@ -4,12 +4,15 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0);
   const [circleClicked, setCircleClicked] = useState(false);
-  const circleRef = useRef(null);
+
+  const circleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!circleRef.current.contains(event.target) && circleClicked) {
-        decrementCount();
+    const handleClickOutside = (event: { target: any; }) => {
+      if (circleRef.current) {
+        if (!circleRef.current.contains(event.target) && circleClicked) {
+          decrementCount();
+        }
       }
     };
 
