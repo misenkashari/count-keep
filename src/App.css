@@ -1,0 +1,32 @@
+.circle-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+.count {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+
+.description {
+  font-size: 16px;
+  color: #000;
+}
